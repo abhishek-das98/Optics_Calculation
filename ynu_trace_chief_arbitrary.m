@@ -10,14 +10,14 @@ function res = ynu_trace_chief_arbitrary(surfaces, u_hat, stop_idx, n_air, z_obj
 
 % Chief ray at the stop:
 y_stop  = 0;                 % by definition: passes through stop center
-nu_stop = n_air * u_hat;     % ν = n * u; stop medium is assumed air here
+nu_stop = n_air * u_hat;     % nu = n * u; stop medium is assumed air here
 
 N       = size(surfaces, 1);
 R       = surfaces(:, 1);
 t       = surfaces(:, 2);
 n_after = surfaces(:, 3);
 
-% Pre-compute n_before and power φ for each surface
+% Pre-compute n_before and power phi for each surface
 n_before = zeros(N, 1);
 phi      = zeros(N, 1);
 n_curr   = n_air;
